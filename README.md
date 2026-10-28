@@ -6,11 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)]()
 
-> **Software Engineering (BCSE301L) - Final Project & Review 2 Submission**  
-> **Student Name:** Ankur Yadav  
-> **Registration Number:** 24BCE1836  
-> **Institution:** School of Computer Science and Engineering, Vellore Institute of Technology, Chennai  
-> **Repository:** [https://github.com/ankur-on-github/NetworkSim](https://github.com/ankur-on-github/NetworkSim)
+An interactive, browser-based distributed systems simulator and chaos engineering platform for designing, visualizing, and stress-testing cloud microservice architectures in real time.
 
 ---
 
@@ -163,39 +159,40 @@ CORS_ORIGINS=http://localhost:3000
 
 ---
 
-## 7. Submission Deliverables & Directory Structure
+## 7. Project Architecture & Directory Structure
 
 ```
 NetworkSim/
-├── app/                          # Next.js 16 App Router (pages, layout, styling)
+├── app/                          # Next.js 16 App Router (pages, layout, global styling)
 ├── backend/                      # FastAPI Python backend
 │   ├── app/
-│   │   ├── simulation/           # Physics engine & diagnostic analyzer
-│   │   ├── main.py               # REST & WebSocket endpoints
-│   │   ├── models.py             # Pydantic data schemas
-│   │   └── templates.py          # Pre-built system blueprints
-│   ├── Dockerfile
-│   └── requirements.txt
-├── components/                   # React components
-│   ├── canvas/LabCanvas.tsx      # Interactive React Flow workspace
-│   ├── nodes/CustomNodes.tsx     # 11 infrastructure node renderers
-│   └── panels/                   # Analytics, Console, and Modal dialogs
-├── lib/store.ts                  # Zustand global reactive state
-├── University_Submissions/       # Coursework & Review 2 deliverables
-│   ├── 24bce1836_Project1_Paper1_v2.docx # Final Springer research paper (Word)
-│   ├── 24bce1836_Project1_Paper1_v2.md   # Final Springer research paper (Markdown)
-│   ├── DA1/                             # Requirement specifications
-│   ├── DA2/                             # Architectural design & UML
-│   ├── DA3/                             # Final implementation report
-│   ├── Diagrams/                        # Vector XML & optimized PNG diagrams
-│   └── Screenshots/                     # System validation screenshots
-├── docker-compose.yml            # Multi-container orchestration
-├── start_lab.bat                 # One-click Windows startup script
-└── README.md                     # Project documentation
+│   │   ├── simulation/           # Physics engine (M/M/1 queues, DAG) & diagnostic analyzer
+│   │   ├── main.py               # REST API & real-time WebSocket endpoints
+│   │   ├── models.py             # Pydantic telemetry & topology schemas
+│   │   └── templates.py          # Pre-configured production system blueprints
+│   ├── Dockerfile                # Backend containerization definition
+│   └── requirements.txt          # Python runtime dependencies
+├── components/                   # Modular React UI components
+│   ├── canvas/LabCanvas.tsx      # Interactive drag-and-drop React Flow canvas
+│   ├── nodes/CustomNodes.tsx     # 11 distinct infrastructure node type renderers
+│   └── panels/                   # Telemetry analytics, live console, and cost modals
+├── lib/store.ts                  # Zustand reactive client-side state store
+├── public/                       # Static UI assets and icons
+├── docker-compose.yml            # Multi-container orchestration specification
+├── start_lab.bat                 # One-click Windows developer launch script
+├── package.json                  # Next.js and frontend dependencies
+├── LICENSE                       # MIT Open Source License
+└── README.md                     # Comprehensive documentation
 ```
 
 ---
 
-## 8. License
+## 8. Author & Maintenance
+
+Developed and maintained by **[Ankur Yadav](https://github.com/ankur-on-github)**.
+
+---
+
+## 9. License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

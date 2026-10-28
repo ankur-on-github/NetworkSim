@@ -48,8 +48,7 @@ __pycache__/
 *.pyo
 .pytest_cache/
 
-# Local Scratch & Helpers
+# Local Development & Temp Files
 scratch/
-rewrite.py
-CAM20180*
+*.log
 ~$*
